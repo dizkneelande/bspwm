@@ -1,0 +1,51 @@
+#! /bin/sh
+
+
+## -- Autostart ----
+pgrep -x sxhkd > /dev/null || sxhkd & 
+picom --config ~/.config/picom/picom.conf -b & 
+nitrogen --restore & 
+#xfce4-power-manager & 
+xsetroot -cursor_name left_ptr &
+setxkbmap -option caps:ctrl_modifier &
+#xinput set-prop "Synaptics TM3381-002" "Device Enabled" 0 &
+xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 1.0 &
+xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 1 &
+nm-applet &
+blueman-applet &
+/usr/lib//polkit-gnome/polkit-gnome-authentication-agent-1 &
+#xrandr --output eDP-1 --primary --auto --left-of HDMI-2 &
+
+## -- Polybar ----
+pkill polybar
+polybar &
+
+
+## -- Monitors ----
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+
+## -- Bspwm  ----
+bspc config border_width         2
+#bspc config border_radius	6
+bspc config window_gap          12
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc config focus_follows_pointer   true
+bspc config pointer_follows_focus   false
+
+bspc config focused_border_color   "#f5c2e7"
+bspc config normal_border_color    "#313244"
+
+
+## -- Window rules ----
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a thunar state=floating
+bspc rule -a polkit-gnome state=floating
+bspc rule -a mpv state=floating

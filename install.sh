@@ -56,7 +56,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 	
 	# stage 1
 	echo -e "\n$CNT - whew, we gunna install some stuff... brb" 
-	for SOFTWR in sddm-git xorg xdg-user-dirs nitrogen lxappearance qt5ct intel-ucode xfce4-terminal polybar rofi bspwm sxhkd brightnessctl bluez bluez-utils blueman pcmanfm unzip mpv git vim neofetch htop btop libwnck3 geany gvfs brave-bin cava caffeine-ng arcolinux-logout archlinux-tweak-tool-git catppuccin-gtk-theme-mocha picom-pijulius-git pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk bibata-cursor-theme-bin catppuccin-gtk-theme-mocha papirus-icon-theme
+	for SOFTWR in sddm-git xorg xdg-user-dirs nitrogen lxappearance qt5ct intel-ucode xfce4-terminal polybar rofi bspwm sxhkd brightnessctl bluez bluez-utils blueman pcmanfm unzip mpv git vim neofetch htop btop libwnck3 geany gvfs brave-bin cava caffeine-ng arcolinux-logout archlinux-tweak-tool-git catppuccin-gtk-theme-mocha picom-pijulius-git pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk bibata-cursor-theme-bin catppuccin-gtk-theme-mocha papirus-icon-theme sddm-catppuccin git sddm-config-editor-git
 	do
 		# check is package exists
 		if yay -Qs $SOFTWR > /dev/null ; then

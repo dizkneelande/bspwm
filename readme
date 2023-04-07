@@ -1,4 +1,6 @@
-TODO: resolve jack2 conflict 
+TODO: 
+- resolve jack2 conflict 
+- yay cannot read xorg package for some reason
 
 sudo pacman -S git xorg
 

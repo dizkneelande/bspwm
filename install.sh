@@ -26,17 +26,18 @@ else
     exit
 fi
 
-sleep3
+sleep 3
 
 #### Check for yay ####
 ISYAY=/sbin/yay
 if [ -f "$ISYAY" ]; then 
     echo -e "$COK - yay was located, yay 4 u!"
 else 
-    echo -e "$CWR - boooo, no yay 4 u"
+    echo -e "$CWR - install yay first u great buffoon"
     read -n1 -rep $'[\e[1;33mACTION\e[0m] - u wanna install yay? (y,n) ' INSTYAY
     if [[ $INSTYAY == "Y" || $INSTYAY == "y" ]]; then
-        git clone https://aur.archlinux.org/yay-git.git &>> $INSTLOG
+        sudo pacman -S --needed base-devel
+		git clone https://aur.archlinux.org/yay-git.git &>> $INSTLOG
         cd yay-git
         makepkg -si --noconfirm &>> ../$INSTLOG
         cd ..
@@ -85,6 +86,7 @@ read -n1 -rep $'[\e[1;33mACTION\e[0m] - we want my sweet configs? (y,n) ' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "$CNT - copying config files..."
     
+	sudo cp nell.rasi /usr/share/rofi/themes/
 	cp -r catppuccin-wallpapers ~/Pictures
 	
 	for DIR in bspwm picom polybar sxhkd 

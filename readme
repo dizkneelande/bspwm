@@ -2,8 +2,6 @@
 
 run install.sh
 
-sudo cp nell.rasi /usr/share/rofi/themes
-
 stuff to catppuccin-ify:
 geany, xfce4-terminal, papirus, plymouth, grub
 

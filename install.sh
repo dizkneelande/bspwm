@@ -100,6 +100,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
         echo -e "$CNT - copying $DIR config to $DIRPATH."  
         cp -R $DIR ~/.config/ &>> $INSTLOG
     done
+    chmod +x ~/.config/bspwm/bspwmrc
+    chmod +x ~/.config/sxhkd/sxhkdrc
 fi	
 ### Script is done ###
 echo -e "$CNT - we done! don't forget to reboot and catppuccin-fy a bunch of stuff c:"

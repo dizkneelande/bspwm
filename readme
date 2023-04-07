@@ -1,4 +1,6 @@
-TODO: pipewire-jack jack2 conflict
+TODO: resolve jack2 conflict 
+
+sudo pacman -S git xorg
 
 git clone https://github.com/dizkneelande/bspwm
 chmod +x install.sh

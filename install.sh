@@ -13,7 +13,7 @@ INSTLOG="install.log"
 clear
 
 # set some expectations for the user
-echo -e "$CNT - get fkn ready to install some sweet bspwm action!! :c
+echo -e "$CNT - get fkn ready to install some sweet bspwm action!! c:
 \n"
 
 sleep 3
@@ -37,7 +37,7 @@ else
     read -n1 -rep $'[\e[1;33mACTION\e[0m] - u wanna install yay? (y,n) ' INSTYAY
     if [[ $INSTYAY == "Y" || $INSTYAY == "y" ]]; then
         sudo pacman -S --needed base-devel
-		git clone https://aur.archlinux.org/yay-git.git &>> $INSTLOG
+	git clone https://aur.archlinux.org/yay-git.git &>> $INSTLOG
         cd yay-git
         makepkg -si --noconfirm &>> ../$INSTLOG
         cd ..
@@ -102,7 +102,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     done
 fi	
 ### Script is done ###
-echo -e "$CNT - yeh yeh we done! don't forget to reboot and catppuccin a bunch of stuff c:"
+echo -e "$CNT - we done! don't forget to reboot and catppuccin-fy a bunch of stuff c:"
 
 
 

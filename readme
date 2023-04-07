@@ -1,6 +1,7 @@
 
-
-run install.sh
+git clone https://github.com/dizkneelande/bspwm
+chmod +x install.sh
+./install.sh
 
 stuff to catppuccin-ify:
 geany, xfce4-terminal, papirus, plymouth, grub

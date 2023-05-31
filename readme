@@ -8,7 +8,6 @@ git clone https://github.com/dizkneelande/bspwm
 chmod +x install.sh
 ./install.sh
 
-stuff to catppuccin-ify:
-geany, xfce4-terminal, papirus, plymouth, grub
+catppuccin: geany, xfce4-terminal, papirus, plymouth, grub
 
 oh-my-bash: half-life theme
